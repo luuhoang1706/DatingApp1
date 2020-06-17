@@ -8,6 +8,7 @@ import { AuthService } from './_services/auth.service';
 import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
 import { AppRoutingModule } from './app-routing.module';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
       NavModule
    ],
    providers: [
-      AuthService
+      AuthService,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
